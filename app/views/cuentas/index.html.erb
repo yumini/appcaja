@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cuentas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero cta</th>
+      <th>Cliente</th>
+      <th>Moneda</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cuentas.each do |cuenta| %>
+      <tr>
+        <td><%= cuenta.numero_cta %></td>
+        <td><%= cuenta.cliente.nombre %></td>
+        <td><%= cuenta.moneda.nom_moneda %></td>
+        <td><%= link_to 'Show', cuenta %></td>
+        <td><%= link_to 'Edit', edit_cuenta_path(cuenta) %></td>
+        <td><%= link_to 'Destroy', cuenta, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cuenta', new_cuenta_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom_opera: MyString
+  abrev_opera: MyString
+  tipo_opera: MyString
+  contable: MyString
+
+two:
+  nom_opera: MyString
+  abrev_opera: MyString
+  tipo_opera: MyString
+  contable: MyString

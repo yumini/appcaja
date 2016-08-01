@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tip Operacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom opera</th>
+      <th>Abrev opera</th>
+      <th>Tipo opera</th>
+      <th>Contable</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tip_operacions.each do |tip_operacion| %>
+      <tr>
+        <td><%= tip_operacion.nom_opera %></td>
+        <td><%= tip_operacion.abrev_opera %></td>
+        <td><%= tip_operacion.tipo_opera %></td>
+        <td><%= tip_operacion.contable %></td>
+        <td><%= link_to 'Show', tip_operacion %></td>
+        <td><%= link_to 'Edit', edit_tip_operacion_path(tip_operacion) %></td>
+        <td><%= link_to 'Destroy', tip_operacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tip operacion', new_tip_operacion_path %>

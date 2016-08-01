@@ -1,0 +1,2 @@
+module MonedaHelper
+end

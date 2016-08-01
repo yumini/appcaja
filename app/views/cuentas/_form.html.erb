@@ -1,0 +1,29 @@
+<%= form_for(@cuenta) do |f| %>
+  <% if @cuenta.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cuenta.errors.count, "error") %> prohibited this cuenta from being saved:</h2>
+
+      <ul>
+      <% @cuenta.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cliente %><br>
+    <%= f.collection_select(:cliente_id, Cliente.all, :id, :nombre, {:include_blank => 'Seleccciona Cliente'}, class: 'form-control') %>
+  </div>
+  <div class="field">
+    <%= f.label :moneda_id %><br>
+    <%= f.collection_select(:moneda_id, Moneda.all, :id, :nom_moneda, {:include_blank => 'Seleccciona Moneda'}, class: 'form-control') %>
+  </div>
+    <div class="field">
+    <%= f.label :numero_cta %><br>
+    <%= f.text_field :numero_cta %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

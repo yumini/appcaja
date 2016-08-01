@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  apepat: MyString
+  apemat: MyString
+  tipdoc: MyString
+  numdoc: MyString
+  direccion: MyString
+  fecnac: 2016-07-26 01:09:55
+  tfno: MyString
+  celular: MyString
+
+two:
+  nombre: MyString
+  apepat: MyString
+  apemat: MyString
+  tipdoc: MyString
+  numdoc: MyString
+  direccion: MyString
+  fecnac: 2016-07-26 01:09:55
+  tfno: MyString
+  celular: MyString

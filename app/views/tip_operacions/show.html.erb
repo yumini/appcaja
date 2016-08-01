@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom opera:</strong>
+  <%= @tip_operacion.nom_opera %>
+</p>
+
+<p>
+  <strong>Abrev opera:</strong>
+  <%= @tip_operacion.abrev_opera %>
+</p>
+
+<p>
+  <strong>Tipo opera:</strong>
+  <%= @tip_operacion.tipo_opera %>
+</p>
+
+<p>
+  <strong>Contable:</strong>
+  <%= @tip_operacion.contable %>
+</p>
+
+<%= link_to 'Edit', edit_tip_operacion_path(@tip_operacion) %> |
+<%= link_to 'Back', tip_operacions_path %>

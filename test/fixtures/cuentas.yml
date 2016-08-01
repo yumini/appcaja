@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_cta: MyString
+  cliente_id: 
+  moneda_id: 
+
+two:
+  numero_cta: MyString
+  cliente_id: 
+  moneda_id: 

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero cta:</strong>
+  <%= @cuenta.numero_cta %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @cuenta.cliente %>
+</p>
+
+<p>
+  <strong>Moneda:</strong>
+  <%= @cuenta.moneda %>
+</p>
+
+<%= link_to 'Edit', edit_cuenta_path(@cuenta) %> |
+<%= link_to 'Back', cuentas_path %>

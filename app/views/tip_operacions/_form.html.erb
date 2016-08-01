@@ -1,0 +1,33 @@
+<%= form_for(@tip_operacion) do |f| %>
+  <% if @tip_operacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tip_operacion.errors.count, "error") %> prohibited this tip_operacion from being saved:</h2>
+
+      <ul>
+      <% @tip_operacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nom_opera %><br>
+    <%= f.text_field :nom_opera %>
+  </div>
+  <div class="field">
+    <%= f.label :abrev_opera %><br>
+    <%= f.text_field :abrev_opera %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_opera %><br>
+    <%= f.select :tipo_opera, TipOperacion.tipo_operas.keys, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :contable %><br>
+    <%= f.select :contable, TipOperacion.contables.keys, class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
